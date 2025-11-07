@@ -108,6 +108,8 @@ async function collectResults(discordWebHook) {
   const outcomes = readOutcomes();
   const failures = printFailures(outcomes);
 
+  console.log(JSON.stringify(outcomes, null, 2));
+
   // Send failure notification if there are current failures
   if (discordWebHook) {
     console.log('Sending current failures to Discord...');

@@ -1,5 +1,8 @@
 name: prepare-hermes-v1-app
 description: Prepares a React Native app with Hermes V1 enabled
+inputs:
+  retry-count:
+    description: 'Number of times to retry the yarn install on failure'
 runs:
   using: composite
   steps:

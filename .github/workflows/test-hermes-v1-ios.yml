@@ -31,6 +31,8 @@ jobs:
 
       - name: Prepare the app with Hermes V1
         uses: ./.github/actions/prepare-hermes-v1-app
+        with:
+          retry-count: ${{ inputs.retry-count }}
 
       - name: Setup xcode
         uses: maxim-lobanov/setup-xcode@v1
